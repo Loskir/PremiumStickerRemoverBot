@@ -21,7 +21,7 @@ bot.chatType('private').command("start", (ctx) => {
 To start, add the bot to your group using the button below`, {
   reply_markup: {
     inline_keyboard: [
-      [{text: 'Add to group', url: `https://t.me/${ctx.me.username}?startgroup&admin=delete_messages`}]
+      [{text: 'Add to group', url: `https://t.me/${ctx.me.username}?startgroup=1&admin=delete_messages`}]
     ]
   }
 })
