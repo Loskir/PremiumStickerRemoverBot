@@ -23,6 +23,7 @@ To start, add the bot to your group using the button below
 Source: github.com/Loskir/PremiumStickerRemoverBot
 By: @Loskir`, {
   parse_mode: 'HTML',
+  disable_web_page_preview: true,
   reply_markup: {
     inline_keyboard: [
       [{text: 'Add to group', url: `https://t.me/${ctx.me.username}?startgroup=1&admin=delete_messages`}]
