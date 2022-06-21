@@ -18,7 +18,11 @@ bot.on("message:sticker", (ctx) => {
 bot.chatType('private').command("start", (ctx) => {
   return ctx.reply(`This bot removes premium stickers from the group
 
-To start, add the bot to your group using the button below`, {
+To start, add the bot to your group using the button below
+
+Source: github.com/Loskir/PremiumStickerRemoverBot
+By: @Loskir`, {
+  parse_mode: 'HTML',
   reply_markup: {
     inline_keyboard: [
       [{text: 'Add to group', url: `https://t.me/${ctx.me.username}?startgroup=1&admin=delete_messages`}]
