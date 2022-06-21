@@ -15,6 +15,14 @@ bot.on("message:sticker", (ctx) => {
   }
 });
 
-bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
+bot.chatType('private').command("start", (ctx) => {
+  return ctx.reply(`This bot removes premium stickers from the group
 
-bot.command("ping", (ctx) => ctx.reply(`Pong! ${new Date()} ${Date.now()}`));
+To start, add the bot to your group using the button below`, {
+  reply_markup: {
+    inline_keyboard: [
+      [{text: 'Add to group', url: `https://t.me/${ctx.me.username}?startgroup&admin=delete_messages`}]
+    ]
+  }
+})
+});
